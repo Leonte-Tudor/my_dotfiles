@@ -1,3 +1,25 @@
+"Vundle config:
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+" call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" code completion
+Plugin 'Valloric/YouCompleteMe'
+
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"Generals:
+set completeopt-=preview
 set number
 set numberwidth=1
 cmap w!! w !sudo tee > /dev/null %
@@ -8,3 +30,4 @@ set shiftwidth=4 expandtab
 "set list lcs=tab:\┆\ 
 "let g:indentLine_setColors = 'SpecialKey'
 let g:indentLine_char = '┆'
+
